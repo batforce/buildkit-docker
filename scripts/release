@@ -6,5 +6,10 @@ TAG=$BUILD_TAG
 DOCKER_REGISTRY=$DOCKER_REGISTRY:-localhost:5006
 PUSH_TAG=$DOCKER_REGISTRY/apps/$APP_NAME:$TAG
 
+
+echo "buildkit-docker"
+echo "releasing!"
+echo push tag set to $PUSH_TAGs
+
 docker tag $APP_NAME:$TAG $PUSH_TAG
 docker push $PUSH_TAG
