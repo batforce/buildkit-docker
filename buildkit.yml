@@ -1,0 +1,6 @@
+version: 1.0
+
+parameters:
+  - name: DOCKER_REGISTRY
+    type: string
+    default: localhost:5000

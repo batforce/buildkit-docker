@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# detect <build-dir>
+
+if [ -z "$(find $1 -iname "Dockerfile")" ]; then
+    echo "Dockerfile not found" && exit 1
+fi
+
+if [ -z "$(find $1 -iname "chart")" ]; then
+    echo "chart folder not found" && exit 1
+fi
+
+echo "docker" && exit 0;
+

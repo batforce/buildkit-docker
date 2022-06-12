@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# release
+
+APP_NAME=$APP_NAME
+TAG=$(git rev-parse --verify --short HEAD)
+DOCKER_REGISTRY=$DOCKER_REGISTRY:-localhost:5006
+PUSH_TAG=$DOCKER_REGISTRY/apps/$APP_NAME:$TAG
+
+docker tag $APP_NAME:$TAG $PUSH_TAG
+docker push $PUSH_TAG

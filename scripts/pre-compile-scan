@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# pre-compile-* <build-dir> <cache-dir>
+
+echo "starting scan"
+sleep 1
+echo "code scan 60%"
+sleep 1
+echo "scan successful" && exit 1
