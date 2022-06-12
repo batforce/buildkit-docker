@@ -4,14 +4,15 @@ echo $1
 echo $2
 
 APP_NAME=$APP_NAME
-TAG=$BUILD_TAG
+BUILD_TAG=$BUILD_TAG
+TAG=$(git --git-dir app/.git rev-parse --verify --short HEAD)
 DOCKER_REGISTRY=$DOCKER_REGISTRY
 PUSH_TAG=$DOCKER_REGISTRY/apps/$APP_NAME:$TAG
 
-
+echo BUILD_TAG_FROM PREVIOUS $BUILD_TAG
 echo "buildkit-docker"
 echo "releasing!"
-echo 
+echo $APP_NAME:$TAG
 echo push tag set to $PUSH_TAG
 
 docker tag $APP_NAME:$TAG $PUSH_TAG
