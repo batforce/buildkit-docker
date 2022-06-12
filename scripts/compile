@@ -11,3 +11,5 @@ echo TAG IS $APP_NAME:$TAG
 
 echo docker build $1 --pull -t $APP_NAME:$TAG
 docker build $1 --pull -t $APP_NAME:$TAG
+
+echo here
