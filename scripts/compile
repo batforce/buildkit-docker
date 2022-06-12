@@ -5,11 +5,10 @@ BUILD_DIR=$1
 APP_NAME=$APP_NAME
 TAG=$(git --git-dir app/.git rev-parse --verify --short HEAD)
 
-echo DOING SOMETHING HEHEHE
-
-echo TAG IS $APP_NAME:$TAG
-
-echo docker build $1 --pull -t $APP_NAME:$TAG
+echo Building docker image
+echo 
+echo Setting tag to $APP_NAME:$TAG
 docker build $1 --pull -t $APP_NAME:$TAG
 
-echo here
+echo "##[task.setvariable]BUILD_TAG=$TAG"
+exit 0

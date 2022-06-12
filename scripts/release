@@ -2,7 +2,7 @@
 # release
 
 APP_NAME=$APP_NAME
-TAG=$(git rev-parse --verify --short HEAD)
+TAG=$BUILD_TAG
 DOCKER_REGISTRY=$DOCKER_REGISTRY:-localhost:5006
 PUSH_TAG=$DOCKER_REGISTRY/apps/$APP_NAME:$TAG
 
