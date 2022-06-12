@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
-# pre-compile-* <build-dir> <cache-dir>
+# compile-* <build-dir> <cache-dir>
 
 BUILD_DIR=$1
 APP_NAME=$APP_NAME
 TAG=$(git rev-parse --verify --short HEAD)
 
-docker build --pull -t $APP_NAME:$TAG BUILD_DIR=$1
+echo DOING SOMETHING HEHEHE
+
+echo TAG IS $APP_NAME:$TAG
+
+docker build $1 --pull -t $APP_NAME:$TAG
