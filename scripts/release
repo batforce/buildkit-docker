@@ -11,7 +11,9 @@ PUSH_TAG=$DOCKER_REGISTRY/apps/$APP_NAME:$TAG
 
 echo "buildkit-docker"
 echo "releasing!"
-echo push tag set to $PUSH_TAGs
+echo 
+echo push tag set to $PUSH_TAG
 
 docker tag $APP_NAME:$TAG $PUSH_TAG
+echo "TAGGED!"
 docker push $PUSH_TAG
