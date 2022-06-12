@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# release
+# release 
+echo $1
+echo $2
 
 APP_NAME=$APP_NAME
 TAG=$BUILD_TAG
