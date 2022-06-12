@@ -17,3 +17,4 @@ echo push tag set to $PUSH_TAG
 docker tag $APP_NAME:$TAG $PUSH_TAG
 echo "TAGGED!"
 docker push $PUSH_TAG
+exit 0
